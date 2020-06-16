@@ -1,17 +1,26 @@
-import React from "react";
-import Joke from './joke';
+import React, {Component} from "react";
 
-function App(){
-    return (
-        <div>
-            <Joke joke = {{question: "What is Whitney Houston’s favorite type of coordination?", punchLine: "HAAANNNNND EYEEEEEEE."}}/>
-            <Joke joke = {{question: "Why did David Hasselhoff change his name to “The Hoff?”", punchLine: "It’s less hassle."}}/>
-            <Joke joke = {{question: "Why does Waldo wear stripes?", punchLine: "Because he doesn’t want to be spotted."}}/>
-            <Joke joke = {{question: "Why do ducks have feathers?", punchLine: "To cover their butt quacks."}}/>
-            <Joke joke = {{question: "What do you call a sad cup of coffee?", punchLine: "Depresso."}}/>
-            <Joke joke = {{punchLine: "To be frank, I’d have to change my name."}} />
-        </div>
-    );
+// Challenge:
+// Given an incomplete class-based component without a constructor,
+// add a constructor and initialize state to fix the broken component.
+
+class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            name: "Tanay",
+            age: 22
+        }
+    }
+    render() {
+        return (
+            <div>
+                <h1>{this.state.name}</h1>
+                <h3>{this.state.age} years old</h3>
+            </div>
+        )
+    }
+
 }
 
-export default App;
+export default App
